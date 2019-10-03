@@ -1,0 +1,12 @@
+node ('UBUNTU')
+{
+    stage ('GIT')
+    {
+        git 'https://github.com/sravaniaws/goljenkins.git'
+
+    }
+    stage ('Package')
+    {
+        sh 'mvn package'
+    }
+}
