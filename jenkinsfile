@@ -2,7 +2,7 @@ node
 {
     stage ('GIT')
     {
-        git 'https://github.com/sravaniaws/goljenkins.git'
+        git 'https://github.com/sravaniaws/jenkinspipeline.git'
 
     }
     stage ('Package')
