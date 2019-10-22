@@ -1,0 +1,19 @@
+node{
+stage('vcs')
+{
+git 'https://github.com/sravaniaws/jenkinspipeline.git'
+}
+stage('build')
+{
+sh 'mvn package'
+}
+stage('build docker image')
+{
+sh 'Docker image build -t 771995/testing:gol .'
+}
+stage('push image')
+{
+sh 'Docker login -u 771995 -p Nagarjuna.1'
+sh 'Docker push 771995/testing:gol'
+}
+}
